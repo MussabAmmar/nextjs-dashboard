@@ -1,6 +1,6 @@
 import { db } from "@vercel/postgres";
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     const client = await db.connect();
     const result = await client.sql`
